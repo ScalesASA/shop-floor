@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>05 — Skills and routines</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav">
+      <a href="index.html">← Shop Floor</a>
+      <span class="stamp">Layer 05 · 20 min</span>
+    </div>
+
+    <p class="stamp">Explainer</p>
+    <h1>Skills and routines</h1>
+    <p class="lede">Official order from the use-cases doc is the whole layer. Skip a step and you will schedule a sloppy path.</p>
+
+    <div class="card">
+      <p class="stamp">TL;DR</p>
+      <ol>
+        <li>Job, sources, output format, and boundaries in the description.</li>
+        <li>One real task with a safe scope.</li>
+        <li>Correct until it is reviewable without you.</li>
+        <li>Save the working process as a skill. Test it on a second input.</li>
+        <li>Create a routine only after retries and failure cases are defined.</li>
+        <li>Keep consequential external actions behind approval.</li>
+      </ol>
+    </div>
+
+    <details class="step">
+      <summary>Step 1 — Demonstrate, then name the skill</summary>
+      <div class="body">
+        <p>Walk the Bot through a multi-step path once across your systems. It can persist that path. Invoke later with <code>/</code>. A skill that still needs you to remember the prompt is not a skill yet.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 2 — Second input is the exam</summary>
+      <div class="body">
+        <p>Run the skill on a different week, different page, or different account list. If the output shape breaks, fix the skill before any clock is involved.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 3 — Routines stop at a review list</summary>
+      <div class="body">
+        <p>Official sales example: schedule a nightly research routine that stops at the review list. That is the SMB pattern. A routine that publishes at 06:00 is an incident.</p>
+      </div>
+    </details>
+
+    <div class="stop">
+      <strong>Stop-line.</strong> No routine that sends, publishes, or spends. Failure case must be written: “if the site is down / the cite is missing / the page changed, stop and ask.”
+    </div>
+
+    <h2>Generic drill</h2>
+    <div class="build">
+      <p><strong>15 minutes.</strong> Take yesterday’s five-bullet summary path. Save it as a skill. Run it on a second document. Compare the two outputs. If the second is sloppy, do not schedule anything.</p>
+    </div>
+
+    <h2>Personal build — weekly EHS skill</h2>
+    <div class="card paper">
+      <p>Turn FireGuard’s table+brief path into a skill named <code>/ehs-week</code>. Inputs: bluesteelco.com public pages + this week’s regulatory headlines the Bot is allowed to search. Output: brief in <code>/workspace/bluesteelco/briefs/YYYY-MM-DD.md</code> plus a draft FAQ, unpublished. Failure: if a claim cannot be sourced, mark “cite needed” and stop. Do not create the Monday routine until you have run <code>/ehs-week</code> on two different dates.</p>
+    </div>
+
+    <div class="ok">Done when two dated briefs share a shape and neither touched the live site.</div>
+
+    <div class="pager">
+      <a href="04-plugins.html">← 04</a>
+      <a href="06-multi-bot.html">Layer 06 →</a>
+    </div>
+    <footer class="site">Layer 05 · clock last</footer>
+  </div>
+</body>
+</html>

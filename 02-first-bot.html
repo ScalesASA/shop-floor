@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>02 — First Bot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav">
+      <a href="index.html">← Shop Floor</a>
+      <span class="stamp">Layer 02 · 20 min</span>
+    </div>
+
+    <p class="stamp">Explainer</p>
+    <h1>First Bot</h1>
+    <p class="lede">Setup is a message, not a workflow builder. Official advice: a focused Bot builds more useful context than one catch-all helper. An account can hold up to 50 Bots and group chats combined.</p>
+
+    <div class="card">
+      <p class="stamp">TL;DR</p>
+      <p>Give it a short name, one primary job, and a description of how it should work. The first task states outcome, sources, constraints, deliverable, and where it must stop for you.</p>
+    </div>
+
+    <p>Official pattern from Cursor / xAI get-started:</p>
+    <pre>Name: Piper
+Job: Product performance
+Description: Investigate product-performance questions with our
+observability tools. Preserve links and screenshots, separate
+evidence from hypotheses, lead with the highest-impact issue.
+Never change production settings.</pre>
+
+    <details class="step">
+      <summary>Step 1 — Write the description as policy</summary>
+      <div class="body">
+        <p>Description = rules that remain true next month. Message = this week’s list. If you put “draft the March email” in the description, the Bot will keep trying to be March.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 2 — First-task contract</summary>
+      <div class="body">
+        <ol>
+          <li>Outcome — what is finished?</li>
+          <li>Sources — which apps, pages, files?</li>
+          <li>Constraints — what must it avoid or ask?</li>
+          <li>Deliverable — what does it return?</li>
+          <li>Review point — when does it stop?</li>
+        </ol>
+        <p>Every official starter prompt ends at a review point on purpose.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 3 — Correct in the conversation, promote to description</summary>
+      <div class="body">
+        <p>When a preference should survive this job (“five bullets, source links inline”), say so and then edit the profile. Do not hope memory will hold a safety rule. Safety goes in the description.</p>
+      </div>
+    </details>
+
+    <div class="stop">
+      <strong>Stop-line.</strong> First Bot may read and draft. It may not send, publish, purchase, or change production.
+    </div>
+
+    <h2>Generic drill</h2>
+    <div class="build">
+      <p><strong>15 minutes in the Grok Bot app.</strong> Create one Bot for a generic SMB (bakery, shop, clinic — pick one). Name + job + description with a never-line. Attach any PDF you have and run: summarize in five bullets; list dates and open questions; cite the section; do not change the file.</p>
+    </div>
+
+    <h2>Personal build — FireGuard</h2>
+    <div class="card paper">
+      <h3>Create this Bot, do not connect the CMS</h3>
+      <pre>Name: FireGuard
+Job: Blue SteelCo EHS weekly scan
+Description: Scan OSHA / NFPA / customer-facing storage questions
+for fire extinguisher racks, pit handrails, and power-gen pit
+compliance. Produce a weekly EHS brief: what changed, who it
+affects, and one recommended site or content action. Separate
+regulation text from interpretation. Never change product copy
+live, never file an attestation, never email a safety manager.
+Stop at the brief and a draft FAQ.</pre>
+      <p>First task:</p>
+      <pre>Open bluesteelco.com as a reader. List the product claims that
+would need an OSHA or NFPA cite if an EHS manager asked
+“says who?” Return a table: claim | page | cite needed | risk.
+Do not log into Wix. Do not edit the site.</pre>
+    </div>
+
+    <div class="ok">Done when FireGuard returns a table you could hand a reviewer without wincing.</div>
+
+    <div class="pager">
+      <a href="01-map-the-product.html">← 01</a>
+      <a href="03-computer-and-secrets.html">Layer 03 →</a>
+    </div>
+    <footer class="site">Layer 02 · one job per badge</footer>
+  </div>
+</body>
+</html>

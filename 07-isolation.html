@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>07 — Isolation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav">
+      <a href="index.html">← Shop Floor</a>
+      <span class="stamp">Layer 07 · 20 min</span>
+    </div>
+
+    <p class="stamp">Explainer</p>
+    <h1>Isolation and teams</h1>
+    <p class="lede">The security model is four bolts: per-user isolation, no access by default, human approval gates (Auto Review), administrative control. Inside one user, Bots isolate personality, not compute.</p>
+
+    <div class="card">
+      <p class="stamp">TL;DR</p>
+      <p>One Firecracker microVM per user. Need a separate credential set? You need a separate Cursor user. Team Rules are short standing bans. Auto Review instructions are the allow/block list for the independent reviewer. Network Controls and action recording are Enterprise.</p>
+    </div>
+
+    <details class="step">
+      <summary>Step 1 — Know which wall you are standing on</summary>
+      <div class="body">
+        <p>User-to-user: hardware isolation. Bot-to-Bot: none for files and cookies. Plugin tokens: held by Cursor, not printed to the model. Local execution on your laptop: per-command approval by default, can be turned off.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 2 — When an SMB should split accounts</summary>
+      <div class="body">
+        <p>Split if one workload must hold production CMS, payroll, or banking and another workload is allowed to roam the public web. Do not split because the names are different. Names are cheap. MicroVMs are the wall.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 3 — Team extras if you grow a seat</summary>
+      <div class="body">
+        <p>Team Rules scoped to Grok Bot. Cloud Agent delegation can be disabled. Public template sharing can be locked in. Privacy Mode (Legacy) blocks Grok Bot entirely — the product requires cloud storage.</p>
+      </div>
+    </details>
+
+    <div class="stop">
+      <strong>Stop-line.</strong> Do not put company data on a public Bot template. Do not use Privacy Mode (Legacy) and expect Bots to run. Do not assume Auto Review is a substitute for an empty description.
+    </div>
+
+    <h2>Generic drill</h2>
+    <div class="build">
+      <p><strong>15 minutes.</strong> Write a one-page isolation decision for your SMB: which logins may live on the Bot computer, which require a second user or must never be saved. Three columns: system / on-computer? / why.</p>
+    </div>
+
+    <h2>Personal build — Blue SteelCo wall</h2>
+    <div class="card paper">
+      <p>Default for this shop: one user for research + drafts (FireGuard, Cite, Reviewer, later Rack). Wix / IONOS / billing stay off that computer. If you later want a Bot to click around the CMS, that is a different Cursor user with no outbound email plugin. Write the wall into every Bot description: “No Wix admin. No registrar. No ads wallet.”</p>
+    </div>
+
+    <div class="ok">Done when the three-column table exists in /workspace/bluesteelco/sources/isolation.md.</div>
+
+    <div class="pager">
+      <a href="06-multi-bot.html">← 06</a>
+      <a href="08-capstone.html">Layer 08 →</a>
+    </div>
+    <footer class="site">Layer 07 · walls are users</footer>
+  </div>
+</body>
+</html>

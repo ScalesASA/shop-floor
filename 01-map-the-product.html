@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>01 — Map the product</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav">
+      <a href="index.html">← Shop Floor</a>
+      <span class="stamp">Layer 01 · 20 min</span>
+    </div>
+
+    <p class="stamp">Explainer</p>
+    <h1>Map the product</h1>
+    <p class="lede">Grok Bot is not a chat window with plugins taped on. It is a named teammate that works on a persistent cloud computer and only comes back when something needs your approval.</p>
+
+    <div class="card">
+      <p class="stamp">TL;DR</p>
+      <p>A <strong>Bot</strong> is a role. The <strong>computer</strong> is shared iron. A <strong>plugin</strong> is a clean API into a tool. <strong>Computer use</strong> is the Bot driving the actual website. A <strong>skill</strong> is a saved path. A <strong>routine</strong> is that path on a clock. The desktop and phone apps are thin clients. Work keeps running if you close the lid.</p>
+    </div>
+
+    <h2>Official map</h2>
+    <p>Primary docs: <a href="https://cursor.com/docs/grok-bot">cursor.com/docs/grok-bot</a>, <a href="https://docs.x.ai/grok-bot/overview">docs.x.ai/grok-bot/overview</a>, architecture on <a href="https://cursor.com/docs/grok-bot/teams">Teams</a>, daily model on <a href="https://cursor.com/docs/grok-bot/work">Work</a>.</p>
+
+    <details class="step">
+      <summary>Step 1 — What a Bot is</summary>
+      <div class="body">
+        <p>Official line: a Bot is a durable AI teammate with a name, a job, its own conversation, and working context that develops over time. Create a separate Bot when the work has a distinct goal, set of tools, working style, approval boundary, or recurring schedule. A “General Helper” does none of that.</p>
+        <p>Put standing rules in the <em>description</em>. Put this-task orders in the <em>message</em>.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 2 — What the computer is</summary>
+      <div class="body">
+        <p>Each user gets one Firecracker microVM. Every Bot on that account shares it: files, browser sessions, logins. Each Bot gets its own screen. Screens are work surfaces, not security walls. Between users, isolation is hardware-level.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 3 — How work actually finishes</summary>
+      <div class="body">
+        <p>Plugins where a connector exists. Computer use everywhere else. Login, 2FA, CAPTCHA, and payment are handed to you. OAuth tokens stay on Cursor’s connector backend. The Bot invokes tools without receiving the tokens.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 4 — What compounds</summary>
+      <div class="body">
+        <p>Memory, files, sessions, and preferences persist on a named Bot. Context is supposed to compound instead of resetting. Changing facts still live in the source system. For consequential decisions, reopen the live source.</p>
+      </div>
+    </details>
+
+    <div class="stop">
+      <strong>Stop-line.</strong> Do not treat “I’ll make another Bot” as isolation. Same computer, same cookies.
+    </div>
+
+    <h2>Generic drill</h2>
+    <div class="build">
+      <p><strong>15 minutes.</strong> On paper or in a note, draw five boxes: Bot / Computer / Plugin / Skill / Routine. Write one sentence each for a fictional HVAC shop named “North Line.” Example: Bot = “Quote desk.” Computer = signed-in estimating sheet. Plugin = Gmail. Skill = “Friday aging quotes.” Routine = that skill at 07:00, stopping at a review list.</p>
+    </div>
+
+    <h2>Personal build — Blue SteelCo</h2>
+    <div class="card paper">
+      <h3>Site as a plant, not a brochure</h3>
+      <p>bluesteelco.com is a machine that should emit: compliance-true product pages, EHS weekly intelligence, and review-ready outreach. It should not emit live publishes or unattended emails.</p>
+      <p>Map the five boxes onto that plant before you create anything in the app:</p>
+      <ul>
+        <li>Bots you expect: FireGuard (scan), Cite (page drafts), Rack (account research), Reviewer (blocking issues only).</li>
+        <li>Computer: browser session for the live site <em>in view-only</em> until Layer 08.</li>
+        <li>Plugins: later. Do not connect the site CMS in this layer.</li>
+      </ul>
+    </div>
+
+    <div class="ok">Done when you can point at each box and say what it is allowed to touch on Blue SteelCo.com.</div>
+
+    <div class="pager">
+      <a href="00-design-system.html">← 00</a>
+      <a href="02-first-bot.html">Layer 02 →</a>
+    </div>
+    <footer class="site">Layer 01 · map before metal</footer>
+  </div>
+</body>
+</html>

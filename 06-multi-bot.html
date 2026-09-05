@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>06 — Multi-bot floor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav">
+      <a href="index.html">← Shop Floor</a>
+      <span class="stamp">Layer 06 · 20 min</span>
+    </div>
+
+    <p class="stamp">Explainer</p>
+    <h1>Multi-bot floor</h1>
+    <p class="lede">Bots can run in parallel, message each other, share context in group chats, and pass ownership. You are not supposed to be the router between tools. Groups are two to six Bots.</p>
+
+    <div class="card">
+      <p class="stamp">TL;DR</p>
+      <p>One owner per stage. Mention with <code>@</code>. Save <code>@everyone</code> for group-wide updates. Bot-to-group handoffs are text-only; send an image in a direct Bot-to-Bot message if the next teammate must inspect it. Parallel unowned handoffs duplicate work.</p>
+    </div>
+
+    <p>Official kickoff shape:</p>
+    <pre>@Researcher gather the source material and link every claim.
+@Writer turn the findings into a launch draft.
+@Reviewer check the draft against the sources and list only
+blocking issues. Don't publish anything.</pre>
+
+    <details class="step">
+      <summary>Step 1 — Split by outcome and stop-line, not by tool</summary>
+      <div class="body">
+        <p>Two Bots that both “use the website” are one Bot. Two Bots where one may draft and one may only veto are two Bots. Duplicate a Bot to reuse a role for a new scope; the copy does not bring conversation history or memory.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 2 — Reviewer does not rewrite</summary>
+      <div class="body">
+        <p>A useful shop Reviewer lists blocking issues only: uncited claims, invented testimonials, production changes, outbound sends, stale numbers. If the artifact is clean, one line.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 3 — You still approve the outside world</summary>
+      <div class="body">
+        <p>Handoffs move work across Bots. They do not move authority off you. Sending and publishing stay human.</p>
+      </div>
+    </details>
+
+    <div class="stop">
+      <strong>Stop-line.</strong> No group where two Bots can both “just hit publish.” No shared production login “because they coordinate.”
+    </div>
+
+    <h2>Generic drill</h2>
+    <div class="build">
+      <p><strong>15 minutes.</strong> Create Writer + Reviewer for the fictional shop. Group chat. One source PDF. Writer drafts a one-page FAQ. Reviewer returns blocking issues only. You do not publish.</p>
+    </div>
+
+    <h2>Personal build — Blue SteelCo cell</h2>
+    <div class="card paper">
+      <p>Create <strong>Cite</strong> and <strong>Reviewer</strong> next to FireGuard.</p>
+      <pre>Name: Cite
+Job: Zero-click / page draft factory
+Description: Turn Blue SteelCo first-person product knowledge into
+citable page drafts and FAQ blocks. Prefer verifiable claims.
+Mark anything that needs a photo, testimonial, or compliance cite.
+Never publish to Wix or social. Never invent reviews.
+Stop at a reviewable draft plus “what still needs a human.”
+
+Name: Reviewer
+Job: Blocking-issue only
+Description: Read another Bot’s artifact against standing rules
+and the live public page. List only blocking issues.
+Do not rewrite unless asked. Do not publish.</pre>
+      <p>Group kickoff:</p>
+      <pre>@FireGuard attach this week’s brief.
+@Cite draft one FAQ block for extinguisher rack storage
+from that brief. @Reviewer list only blocking issues.
+Nobody publishes.</pre>
+    </div>
+
+    <div class="ok">Done when Reviewer catches at least one missing cite or cleanly says the draft is shippable-by-human.</div>
+
+    <div class="pager">
+      <a href="05-skills-and-routines.html">← 05</a>
+      <a href="07-isolation.html">Layer 07 →</a>
+    </div>
+    <footer class="site">Layer 06 · one owner per bench</footer>
+  </div>
+</body>
+</html>

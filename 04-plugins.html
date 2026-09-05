@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>04 — Plugins</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav">
+      <a href="index.html">← Shop Floor</a>
+      <span class="stamp">Layer 04 · 20 min</span>
+    </div>
+
+    <p class="stamp">Explainer</p>
+    <h1>Plugins and computer use</h1>
+    <p class="lede">Plugins are the structured path into Gmail, Notion, Slack, and the rest. Computer use is how the Bot works a site that has no connector. Plugins are more reliable when they exist. They are also account-wide.</p>
+
+    <div class="card">
+      <p class="stamp">TL;DR</p>
+      <p>Install from Plugins or an in-chat Connect card. Finish OAuth in your browser. Tokens stay on Cursor’s backend. Team policy can mark a plugin “Disabled by team admin.” Blocking a plugin does not block the website — that takes Network Controls (Enterprise).</p>
+    </div>
+
+    <details class="step">
+      <summary>Step 1 — Prefer a plugin over clicking</summary>
+      <div class="body">
+        <p>Official stance: plugins beat clicking through a website when a connector exists. Use computer use for the long tail and for tools with no API.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 2 — Scope is the whole roster</summary>
+      <div class="body">
+        <p>An installed plugin is available to every Bot you run. Do not connect a send-capable inbox “just for the researcher.” The Reviewer can see that path too.</p>
+      </div>
+    </details>
+    <details class="step">
+      <summary>Step 3 — Sites still fight automation</summary>
+      <div class="body">
+        <p>A site can block automation, expire a session, or demand a human step. The Bot is supposed to hand those steps to you, not work around them.</p>
+      </div>
+    </details>
+
+    <div class="stop">
+      <strong>Stop-line.</strong> Do not connect the production CMS, ads wallet, or bank. Read-only analytics and a drafts mailbox are enough for an SMB lab.
+    </div>
+
+    <h2>Generic drill</h2>
+    <div class="build">
+      <p><strong>15 minutes.</strong> Connect one read-mostly plugin you already trust (calendar or a notes app). Ask the Bot to list tomorrow’s events or the last three notes. Confirm it cannot send. If the only plugin you have can send, do not connect it yet — use computer use on a public page instead.</p>
+    </div>
+
+    <h2>Personal build — Blue SteelCo</h2>
+    <div class="card paper">
+      <p>This layer: no Wix plugin, no domain registrar, no ads. Optional: a notes or drive plugin that holds source PDFs (OSHA excerpts you already own, product spec sheets). Ask FireGuard to file the Layer 02 table into <code>/workspace/bluesteelco/sources/</code>.</p>
+    </div>
+
+    <div class="ok">Done when FireGuard can find last layer’s table without you pasting it again.</div>
+
+    <div class="pager">
+      <a href="03-computer-and-secrets.html">← 03</a>
+      <a href="05-skills-and-routines.html">Layer 05 →</a>
+    </div>
+    <footer class="site">Layer 04 · connectors are shared keys</footer>
+  </div>
+</body>
+</html>
